@@ -18,16 +18,18 @@ const s = StyleSheet.create({
 
   subWrapper: {
     marginTop: StatusBar.currentHeight,
+    padding: 12,
     flex: 1,
     width: "100%",
-    alignItems: "center",
-    justifyContent: "center",
   },
   row: {
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
     marginVertical: 12,
+  },
+  card: {
+    width: "100%",
   },
 });
 
@@ -66,7 +68,7 @@ class WeatherPage extends React.PureComponent {
           source={image ? { uri: image } : undefined}
         >
           <View style={s.subWrapper}>
-            <Card>
+            <Card style={s.card}>
               <Text style={{ fontSize: 34, textAlign: "center" }}>{city}</Text>
               <View style={s.row}>
                 {iconUri ? (
